@@ -4,11 +4,11 @@
     --bg-tertiary: #1a2347;
     --text-primary: #e2e8f0;
     --text-secondary: #94a3b8;
-    --accent-primary: #00ff9f;
+    --accent-primary: #ff9900;
     --accent-secondary: #00d9ff;
     --accent-danger: #ff3366;
-    --border-color: rgba(0, 255, 159, 0.1);
-    --shadow-glow: rgba(0, 255, 159, 0.3);
+   --border-color: rgba(255, 153, 0, 0.1);
+    --shadow-glow: rgba(255, 153, 0, 0.3);
 }
 
 * {
@@ -24,6 +24,25 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+.ctf-block {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.ctf-block h2 {
+    color: var(--accent-secondary);
+    margin-bottom: 1rem;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
 
 /* Animated Background */
 body::before {
