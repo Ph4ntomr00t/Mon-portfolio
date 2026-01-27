@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure Security - PhantomRoot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">PhantomRoot</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="whoami.html">whoami</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="ctf.html">ctf</a></li>
+                <li><a href="projects.html">projets</a></li>
+                <li><a href="certs.html">certifications</a></li>
+                <li><a href="tools.html">outils</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding-top: 120px;">
+        <div class="container">
+            <h1 class="section-title">Infrastructure Security</h1>
+            <p class="section-subtitle">Sécurisation et audit d'infrastructures IT</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3>Cloud Security</h3>
+                    <p>Audits et sécurisation AWS, Azure, GCP. IAM hardening, network security, compliance, architecture zero-trust.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Network Security</h3>
+                    <p>Segmentation réseau, firewall configuration, IDS/IPS deployment, VPN security, network monitoring.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐳</div>
+                    <h3>Container Security</h3>
+                    <p>Docker & Kubernetes security, image scanning, runtime protection, secrets management, RBAC policies.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>System Hardening</h3>
+                    <p>Linux/Windows hardening, baseline security, patch management, configuration management, compliance frameworks.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Security Monitoring</h3>
+                    <p>SIEM deployment, log aggregation, threat detection, incident response, security orchestration.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Infrastructure as Code</h3>
+                    <p>Secure IaC practices, Terraform security, Ansible hardening, GitOps security, policy as code.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem;">
+                <h2 class="section-title">Technologies & Plateformes</h2>
+                
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-secondary); font-size: 1.3rem; margin-bottom: 1rem;">Cloud Providers</h3>
+                    <div class="tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">Azure</span>
+                        <span class="tag">Google Cloud</span>
+                        <span class="tag">DigitalOcean</span>
+                        <span class="tag">Linode</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-secondary); font-size: 1.3rem; margin-bottom: 1rem;">Containerization & Orchestration</h3>
+                    <div class="tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Podman</span>
+                        <span class="tag">Helm</span>
+                        <span class="tag">Istio</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-secondary); font-size: 1.3rem; margin-bottom: 1rem;">Infrastructure as Code</h3>
+                    <div class="tags">
+                        <span class="tag">Terraform</span>
+                        <span class="tag">Ansible</span>
+                        <span class="tag">CloudFormation</span>
+                        <span class="tag">Pulumi</span>
+                        <span class="tag">Chef</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-secondary); font-size: 1.3rem; margin-bottom: 1rem;">Security Tools</h3>
+                    <div class="tags">
+                        <span class="tag">Wazuh</span>
+                        <span class="tag">Snort/Suricata</span>
+                        <span class="tag">pfSense</span>
+                        <span class="tag">Vault</span>
+                        <span class="tag">Lynis</span>
+                        <span class="tag">OpenSCAP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 PhantomRoot. All rights reserved.</p>
+            <p class="terminal-text">root@phantom:~# logout</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+EOF
+
+cat > /home/claude/osint.html << 'EOF'
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT - PhantomRoot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">PhantomRoot</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="whoami.html">whoami</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="ctf.html">ctf</a></li>
+                <li><a href="projects.html">projets</a></li>
+                <li><a href="certs.html">certifications</a></li>
+                <li><a href="tools.html">outils</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding-top: 120px;">
+        <div class="container">
+            <h1 class="section-title">OSINT & Reconnaissance</h1>
+            <p class="section-subtitle">Open Source Intelligence & Information Gathering</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Passive Reconnaissance</h3>
+                    <p>DNS enumeration, subdomain discovery, certificate transparency, metadata analysis, public records search.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Domain Intelligence</h3>
+                    <p>WHOIS lookup, DNS records, historical data, domain relationships, infrastructure mapping, ASN discovery.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <h3>People & Organizations</h3>
+                    <p>Social media profiling, employee enumeration, organizational structure, email harvesting, contact discovery.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📸</div>
+                    <h3>Image Intelligence</h3>
+                    <p>Reverse image search, EXIF data extraction, geolocation, facial recognition, visual similarity analysis.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💾</div>
+                    <h3>Data Breaches</h3>
+                    <p>Credential leaks research, breach databases, compromised data analysis, password pattern identification.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📡</div>
+                    <h3>Infrastructure Mapping</h3>
+                    <p>Shodan queries, Censys searches, IP intelligence, service fingerprinting, technology stack identification.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem;">
+                <h2 class="section-title">OSINT Tools & Resources</h2>
+                
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-secondary); font-size: 1.3rem; margin-bottom: 1rem;">Reconnaissance Frameworks</h3>
+                    <div class="tags">
+                        <span class="tag">Maltego</span>
+                        <span class="tag">SpiderFoot</span>
+                        <span class="tag">Recon-ng</span>
+                        <span class="tag">theHarvester</span>
+                        <span class="tag">OSINT Framework</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-secondary); font-size: 1.3rem; margin-bottom: 1rem;">Search Engines & Databases</h3>
+                    <div class="tags">
+                        <span class="tag">Shodan</span>
+                        <span class="tag">Censys</span>
+                        <span class="tag">Hunter.io</span>
+                        <span class="tag">Have I Been Pwned</span>
+                        <span class="tag">Dehashed</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-secondary); font-size: 1.3rem; margin-bottom: 1rem;">Domain & DNS Tools</h3>
+                    <div class="tags">
+                        <span class="tag">Amass</span>
+                        <span class="tag">Subfinder</span>
+                        <span class="tag">DNSdumpster</span>
+                        <span class="tag">crt.sh</span>
+                        <span class="tag">SecurityTrails</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-secondary); font-size: 1.3rem; margin-bottom: 1rem;">Social Media Intelligence</h3>
+                    <div class="tags">
+                        <span class="tag">Sherlock</span>
+                        <span class="tag">Social-Analyzer</span>
+                        <span class="tag">Twint</span>
+                        <span class="tag">InstaLooter</span>
+                        <span class="tag">LinkedIn Helper</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-secondary); font-size: 1.3rem; margin-bottom: 1rem;">Image & Geolocation</h3>
+                    <div class="tags">
+                        <span class="tag">Google Images</span>
+                        <span class="tag">TinEye</span>
+                        <span class="tag">Yandex Images</span>
+                        <span class="tag">ExifTool</span>
+                        <span class="tag">GeoGuessr</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 3rem;">
+                <h2 style="color: var(--accent-primary); font-size: 2rem; margin-bottom: 2rem;">OSINT Methodology</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 1</div>
+                        <h3 class="timeline-title">Requirements Definition</h3>
+                        <p class="timeline-description">
+                            Définir les objectifs de la collecte d'information, identifier les questions clés, établir le scope et les limites légales.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 2</div>
+                        <h3 class="timeline-title">Collection</h3>
+                        <p class="timeline-description">
+                            Collecter les données depuis les sources publiques : moteurs de recherche, réseaux sociaux, bases de données, documents publics.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 3</div>
+                        <h3 class="timeline-title">Processing</h3>
+                        <p class="timeline-description">
+                            Organiser, filtrer et normaliser les données collectées. Éliminer les doublons et les informations non pertinentes.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 4</div>
+                        <h3 class="timeline-title">Analysis</h3>
+                        <p class="timeline-description">
+                            Analyser les données, identifier les patterns, établir des connexions, valider les informations obtenues.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 5</div>
+                        <h3 class="timeline-title">Reporting</h3>
+                        <p class="timeline-description">
+                            Produire un rapport structuré avec findings, visualisations, recommandations et sources documentées.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 PhantomRoot. All rights reserved.</p>
+            <p class="terminal-text">root@phantom:~# logout</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

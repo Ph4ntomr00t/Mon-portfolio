@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackTheBox - PhantomRoot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">PhantomRoot</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="whoami.html">whoami</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="ctf.html">ctf</a></li>
+                <li><a href="projects.html">projets</a></li>
+                <li><a href="certs.html">certifications</a></li>
+                <li><a href="tools.html">outils</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding-top: 120px;">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                <h1 class="section-title" style="margin-bottom: 0;">HackTheBox</h1>
+                <div style="background: linear-gradient(135deg, #9fef00, #00ff9f); padding: 0.5rem 1.5rem; border-radius: 25px; color: #0a0e27; font-weight: 700;">
+                    Pro Hacker
+                </div>
+            </div>
+            <p class="section-subtitle">Writeups complets avec méthodologie détaillée</p>
+
+            <!-- HTB Profile Stats -->
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 3rem; margin-bottom: 3rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; text-align: center;">
+                    <div>
+                        <div style="font-size: 2.5rem; color: var(--accent-primary); font-weight: 700; margin-bottom: 0.5rem;">Pro Hacker</div>
+                        <div style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.85rem;">Rank</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; color: var(--accent-primary); font-weight: 700; margin-bottom: 0.5rem;">150+</div>
+                        <div style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.85rem;">Machines Owned</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; color: var(--accent-primary); font-weight: 700; margin-bottom: 0.5rem;">45</div>
+                        <div style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.85rem;">User Owns</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; color: var(--accent-primary); font-weight: 700; margin-bottom: 0.5rem;">38</div>
+                        <div style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.85rem;">Root Owns</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; color: var(--accent-primary); font-weight: 700; margin-bottom: 0.5rem;">120+</div>
+                        <div style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.85rem;">Challenges</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Difficulty Filter -->
+            <div class="tags" style="margin-bottom: 3rem;">
+                <span class="tag" style="cursor: pointer;" onclick="filterDifficulty('all')">Tous</span>
+                <span class="tag" style="cursor: pointer; background: #00ff9f; color: #0a0e27;" onclick="filterDifficulty('easy')">Easy</span>
+                <span class="tag" style="cursor: pointer; background: #ffb700; color: #0a0e27;" onclick="filterDifficulty('medium')">Medium</span>
+                <span class="tag" style="cursor: pointer; background: #ff3366; color: #f0f0f0;" onclick="filterDifficulty('hard')">Hard</span>
+                <span class="tag" style="cursor: pointer; background: #9f00ff; color: #f0f0f0;" onclick="filterDifficulty('insane')">Insane</span>
+            </div>
+
+            <!-- Machines Grid -->
+            <div class="post-grid" id="machines-container">
+                <!-- Insane Machine -->
+                <div class="post-card" data-difficulty="insane">
+                    <div class="post-image" style="background: linear-gradient(135deg, #9f00ff, #6a00b3);">
+                        <div style="font-size: 4rem;">💀</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag" style="background: #9f00ff;">Insane - Windows</span>
+                            <span>Retired</span>
+                        </div>
+                        <h3 class="post-title">Blackfield - Advanced AD</h3>
+                        <p class="post-excerpt">
+                            Machine très difficile : SMB enumeration, ASREPRoasting, Kerberos TGT manipulation, 
+                            LSASS dump analysis, DCSync attack et compromission totale du domaine AD.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: var(--accent-secondary);">#AD #DCSync #Kerberos #LSASS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hard Machine 1 -->
+                <div class="post-card" data-difficulty="hard">
+                    <div class="post-image" style="background: linear-gradient(135deg, #ff3366, #b30000);">
+                        <div style="font-size: 4rem;">🔐</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag" style="background: #ff3366;">Hard - Windows</span>
+                            <span>Active</span>
+                        </div>
+                        <h3 class="post-title">Manager - ADCS Exploitation</h3>
+                        <p class="post-excerpt">
+                            MSSQL enumeration, website backup analysis, credential discovery, ADCS certificate 
+                            template misconfiguration et privilege escalation via ESC1.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: var(--accent-secondary);">#ADCS #MSSQL #Certificates #Windows</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hard Machine 2 -->
+                <div class="post-card" data-difficulty="hard">
+                    <div class="post-image" style="background: linear-gradient(135deg, #ff3366, #b30000);">
+                        <div style="font-size: 4rem;">⚔️</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag" style="background: #ff3366;">Hard - Linux</span>
+                            <span>Retired</span>
+                        </div>
+                        <h3 class="post-title">Apocalyst - Advanced Enum</h3>
+                        <p class="post-excerpt">
+                            WordPress enumeration, image steganography, password cracking, Bash history analysis 
+                            et exploitation de cron job misconfiguration pour root.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: var(--accent-secondary);">#WordPress #Stego #Cron #Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium Machine 1 -->
+                <div class="post-card" data-difficulty="medium">
+                    <div class="post-image" style="background: linear-gradient(135deg, #ffb700, #ff8500);">
+                        <div style="font-size: 4rem;">📝</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag" style="background: #ffb700; color: #0a0e27;">Medium - Linux</span>
+                            <span>Active</span>
+                        </div>
+                        <h3 class="post-title">Editorial - SSRF Chain</h3>
+                        <p class="post-excerpt">
+                            SSRF vulnerability exploitation pour accéder aux services internes, Git repository 
+                            exposure, Python deserialization et privilege escalation via sudo.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: var(--accent-secondary);">#SSRF #Git #Deserialization #Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium Machine 2 -->
+                <div class="post-card" data-difficulty="medium">
+                    <div class="post-image" style="background: linear-gradient(135deg, #ffb700, #ff8500);">
+                        <div style="font-size: 4rem;">🔍</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag" style="background: #ffb700; color: #0a0e27;">Medium - Linux</span>
+                            <span>Retired</span>
+                        </div>
+                        <h3 class="post-title">Busqueda - Code Injection</h3>
+                        <p class="post-excerpt">
+                            Python code injection dans une application de recherche, credentials dans .git config, 
+                            exploitation de Git hooks et sudo misconfiguration.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: var(--accent-secondary);">#Python #CodeInjection #Git #Sudo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium Machine 3 -->
+                <div class="post-card" data-difficulty="medium">
+                    <div class="post-image" style="background: linear-gradient(135deg, #ffb700, #ff8500);">
+                        <div style="font-size: 4rem;">🎫</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag" style="background: #ffb700; color: #0a0e27;">Medium - Linux</span>
+                            <span>Retired</span>
+                        </div>
+                        <h3 class="post-title">Seventeen - LFI to RCE</h3>
+                        <p class="post-excerpt">
+                            Local File Inclusion exploitation, log poisoning technique, RCE via PHP logs, 
+                            MySQL credentials discovery et kernel exploitation.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: var(--accent-secondary);">#LFI #LogPoisoning #RCE #Kernel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Easy Machine 1 -->
+                <div class="post-card" data-difficulty="easy">
+                    <div class="post-image" style="background: linear-gradient(135deg, #00ff9f, #00d9ff);">
+                        <div style="font-size: 4rem;">🔑</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag" style="background: #00ff9f; color: #0a0e27;">Easy - Linux</span>
+                            <span>Active</span>
+                        </div>
+                        <h3 class="post-title">Keeper - KeePass CVE</h3>
+                        <p class="post-excerpt">
+                            Default credentials sur Request Tracker, KeePass database discovery, exploitation de 
+                            CVE-2023-32784 pour extraire le master password et SSH access.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: var(--accent-secondary);">#CVE #KeePass #DefaultCreds #SSH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Easy Machine 2 -->
+                <div class="post-card" data-difficulty="easy">
+                    <div class="post-image" style="background: linear-gradient(135deg, #00ff9f, #00d9ff);">
+                        <div style="font-size: 4rem;">🚀</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag" style="background: #00ff9f; color: #0a0e27;">Easy - Linux</span>
+                            <span>Retired</span>
+                        </div>
+                        <h3 class="post-title">CozyHosting - Spring Boot</h3>
+                        <p class="post-excerpt">
+                            Spring Boot Actuator exposure, session cookie hijacking, command injection via SSH, 
+                            PostgreSQL password discovery et privilege escalation.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: var(--accent-secondary);">#SpringBoot #Actuator #CommandInjection #PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Easy Machine 3 -->
+                <div class="post-card" data-difficulty="easy">
+                    <div class="post-image" style="background: linear-gradient(135deg, #00ff9f, #00d9ff);">
+                        <div style="font-size: 4rem;">📦</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag" style="background: #00ff9f; color: #0a0e27;">Easy - Windows</span>
+                            <span>Retired</span>
+                        </div>
+                        <h3 class="post-title">Delivery - MatterMost Exploit</h3>
+                        <p class="post-excerpt">
+                            Ticket system exploitation, MatterMost credential exposure, password cracking avec 
+                            hashcat rules et exploitation de sudo permissions.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: var(--accent-secondary);">#MatterMost #TicketSystem #Hashcat #Windows</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Methodology Section -->
+            <div style="margin-top: 5rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 3rem;">
+                <h2 style="color: var(--accent-primary); font-size: 2rem; margin-bottom: 2rem;">Ma Méthodologie HTB</h2>
+                
+                <div style="display: grid; gap: 2rem;">
+                    <div>
+                        <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">1. Reconnaissance</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8;">
+                            Port scanning complet avec nmap, énumération des services, identification des technologies, 
+                            subdomain enumeration et recherche d'informations publiques.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">2. Enumeration</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8;">
+                            Analyse approfondie des services identifiés, fuzzing de directories, énumération SMB/NFS, 
+                            analyse des applications web et recherche de points d'entrée potentiels.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">3. Exploitation</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8;">
+                            Test des vulnérabilités identifiées, exploitation manuelle et avec Metasploit, 
+                            développement de PoC personnalisés si nécessaire.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">4. Post-Exploitation</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8;">
+                            Énumération locale, recherche de credentials, analyse de configurations, 
+                            identification de vecteurs de privilege escalation.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">5. Privilege Escalation</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8;">
+                            Exploitation des failles identifiées pour obtenir les privilèges root/administrator, 
+                            documentation complète du processus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 PhantomRoot. All rights reserved.</p>
+            <p class="terminal-text">root@phantom:~# logout</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        function filterDifficulty(difficulty) {
+            const machines = document.querySelectorAll('.post-card');
+            machines.forEach(machine => {
+                if (difficulty === 'all' || machine.dataset.difficulty === difficulty) {
+                    machine.style.display = 'block';
+                } else {
+                    machine.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

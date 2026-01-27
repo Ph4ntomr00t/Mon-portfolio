@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - PhantomRoot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">PhantomRoot</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="whoami.html">whoami</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="ctf.html">ctf</a></li>
+                <li><a href="projects.html">projets</a></li>
+                <li><a href="certs.html">certifications</a></li>
+                <li><a href="tools.html">outils</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding-top: 120px;">
+        <div class="container">
+            <h1 class="section-title">Mes Projets</h1>
+            <p class="section-subtitle">Projets et apprentissages en cybersécurité et développement</p>
+
+            <div class="tags" style="margin-bottom: 3rem;">
+                <span class="tag" style="cursor: pointer;" onclick="filterProjects('all')">Tous</span>
+                <span class="tag" style="cursor: pointer;" onclick="filterProjects('python')">Python</span>
+                <span class="tag" style="cursor: pointer;" onclick="filterProjects('web')">Web</span>
+                <span class="tag" style="cursor: pointer;" onclick="filterProjects('ctf')">CTF</span>
+            </div>
+
+            <div class="post-grid" id="projects-container">
+                <!-- Projet simple Python -->
+                <div class="post-card" data-category="python">
+                    <div class="post-image" style="background: linear-gradient(135deg, #00ff9f, #00d9ff);">🐍</div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag">Python</span>
+                            <span>2025</span>
+                        </div>
+                        <h3 class="post-title">Mini Scanner IP</h3>
+                        <p class="post-excerpt">
+                            Petit projet Python pour scanner les IP d'un réseau local et identifier les ports ouverts.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: gray;">#Python #Réseau #Apprentissage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet Web simple -->
+                <div class="post-card" data-category="web">
+                    <div class="post-image" style="background: linear-gradient(135deg, #ffb700, #ff8500);">💻</div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag">HTML/CSS</span>
+                            <span>2025</span>
+                        </div>
+                        <h3 class="post-title">Portfolio Web</h3>
+                        <p class="post-excerpt">
+                            Création de mon portfolio personnel pour présenter mes projets et mon parcours.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: gray;">#HTML #CSS #Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet CTF simple -->
+                <div class="post-card" data-category="ctf">
+                    <div class="post-image" style="background: linear-gradient(135deg, #9f00ff, #6a00b3);">🏆</div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-tag">CTF</span>
+                            <span>2025</span>
+                        </div>
+                        <h3 class="post-title">Défi Crypto Simple</h3>
+                        <p class="post-excerpt">
+                            Petit challenge de chiffrement/déchiffrement réalisé pour m'entraîner sur TryHackMe.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span style="font-size: 0.8rem; color: gray;">#CTF #Crypto #Apprentissage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 PhantomRoot. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.post-card');
+            projects.forEach(project => {
+                if (category === 'all' || project.dataset.category === category) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

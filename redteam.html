@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Team - PhantomRoot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">PhantomRoot</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="whoami.html">whoami</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="ctf.html">ctf</a></li>
+                <li><a href="projects.html">projets</a></li>
+                <li><a href="certs.html">certifications</a></li>
+                <li><a href="tools.html">outils</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding-top: 120px;">
+        <div class="container">
+            <h1 class="section-title" style="color: #ff3366;">Red Team Operations</h1>
+            <p class="section-subtitle">Simulations d'attaques avancées et adversary emulation</p>
+
+            <div style="background: linear-gradient(135deg, rgba(255, 51, 102, 0.1), rgba(179, 0, 0, 0.1)); border: 1px solid rgba(255, 51, 102, 0.3); border-radius: 12px; padding: 3rem; margin-bottom: 3rem;">
+                <h2 style="color: #ff3366; margin-bottom: 1.5rem;">Red Team vs Pentest</h2>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    Le Red Teaming va au-delà du pentesting traditionnel : il s'agit de simuler un adversaire 
+                    réel avec des objectifs spécifiques, en utilisant des TTP (Tactics, Techniques, Procedures) 
+                    d'acteurs malveillants, tout en évitant la détection des équipes bleues.
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🎭</div>
+                    <h3>Adversary Simulation</h3>
+                    <p>Simulation d'attaquants sophistiqués (APT, ransomware groups) avec leurs TTP documentées dans MITRE ATT&CK framework.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏰</div>
+                    <h3>Active Directory Attacks</h3>
+                    <p>Kerberoasting, ASREPRoasting, Golden/Silver Tickets, DCSync, pass-the-hash, constrained delegation, ADCS exploitation.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👻</div>
+                    <h3>Evasion Techniques</h3>
+                    <p>Bypass EDR/AV, AMSI/ETW evasion, obfuscation, process injection, DLL sideloading, living-off-the-land binaries.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔗</div>
+                    <h3>C2 Infrastructure</h3>
+                    <p>Déploiement et gestion d'infrastructures C2 (Cobalt Strike, Sliver, Covenant) avec domain fronting et infrastructure rotating.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Lateral Movement</h3>
+                    <p>Techniques de déplacement latéral : WMI, PSRemoting, SMB, RDP, pass-the-ticket, overpass-the-hash, golden tickets.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⏳</div>
+                    <h3>Persistence</h3>
+                    <p>Mécanismes de persistence avancés : registry keys, scheduled tasks, WMI events, DLL hijacking, service installation.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem;">
+                <h2 class="section-title">Kill Chain Methodology</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 1</div>
+                        <h3 class="timeline-title">Reconnaissance</h3>
+                        <p class="timeline-description">
+                            OSINT gathering, infrastructure mapping, employee enumeration, technology stack identification, 
+                            security posture assessment, social engineering vectors.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 2</div>
+                        <h3 class="timeline-title">Initial Access</h3>
+                        <p class="timeline-description">
+                            Phishing campaigns, drive-by compromise, supply chain attacks, public-facing application exploitation, 
+                            valid accounts compromise.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 3</div>
+                        <h3 class="timeline-title">Execution & Persistence</h3>
+                        <p class="timeline-description">
+                            Command execution via various methods, malware deployment, persistence mechanisms establishment, 
+                            backdoor installation, scheduled task creation.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 4</div>
+                        <h3 class="timeline-title">Privilege Escalation</h3>
+                        <p class="timeline-description">
+                            Local privilege escalation, exploitation of misconfigurations, token manipulation, 
+                            UAC bypass, kernel exploits when necessary.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 5</div>
+                        <h3 class="timeline-title">Defense Evasion</h3>
+                        <p class="timeline-description">
+                            EDR/AV bypass, log manipulation, indicator removal, process injection, obfuscation, 
+                            timestomping, disabling security tools.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 6</div>
+                        <h3 class="timeline-title">Credential Access</h3>
+                        <p class="timeline-description">
+                            LSASS dumping, SAM/NTDS extraction, Kerberos ticket extraction, credential phishing, 
+                            keylogging, password spraying attacks.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 7</div>
+                        <h3 class="timeline-title">Discovery</h3>
+                        <p class="timeline-description">
+                            Network enumeration, Active Directory reconnaissance, BloodHound analysis, 
+                            system/user/group discovery, sensitive data location.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 8</div>
+                        <h3 class="timeline-title">Lateral Movement</h3>
+                        <p class="timeline-description">
+                            Moving between systems, remote services exploitation, pass-the-hash/ticket attacks, 
+                            RDP/SSH hijacking, exploitation of trust relationships.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 9</div>
+                        <h3 class="timeline-title">Collection & Exfiltration</h3>
+                        <p class="timeline-description">
+                            Data collection from various sources, staging for exfiltration, covert channels, 
+                            data compression, encrypted exfiltration paths.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 10</div>
+                        <h3 class="timeline-title">Impact & Objectives</h3>
+                        <p class="timeline-description">
+                            Achieving defined objectives (flag capture, data access, domain compromise), 
+                            demonstrating potential impact, documentation for reporting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem;">
+                <h2 class="section-title">Arsenal Red Team</h2>
+                
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: #ff3366; font-size: 1.3rem; margin-bottom: 1rem;">C2 Frameworks</h3>
+                    <div class="tags">
+                        <span class="tag">Cobalt Strike</span>
+                        <span class="tag">Sliver</span>
+                        <span class="tag">Covenant</span>
+                        <span class="tag">Empire</span>
+                        <span class="tag">Mythic</span>
+                        <span class="tag">Havoc</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: #ff3366; font-size: 1.3rem; margin-bottom: 1rem;">AD Exploitation</h3>
+                    <div class="tags">
+                        <span class="tag">BloodHound</span>
+                        <span class="tag">Rubeus</span>
+                        <span class="tag">Mimikatz</span>
+                        <span class="tag">Impacket</span>
+                        <span class="tag">PowerView</span>
+                        <span class="tag">Certify</span>
+                        <span class="tag">Certipy</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: #ff3366; font-size: 1.3rem; margin-bottom: 1rem;">Evasion & Obfuscation</h3>
+                    <div class="tags">
+                        <span class="tag">Invoke-Obfuscation</span>
+                        <span class="tag">AMSITrigger</span>
+                        <span class="tag">Donut</span>
+                        <span class="tag">ScareCrow</span>
+                        <span class="tag">ConfuserEx</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: #ff3366; font-size: 1.3rem; margin-bottom: 1rem;">Post-Exploitation</h3>
+                    <div class="tags">
+                        <span class="tag">SharpHound</span>
+                        <span class="tag">SharpUp</span>
+                        <span class="tag">Seatbelt</span>
+                        <span class="tag">LaZagne</span>
+                        <span class="tag">KeeThief</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 PhantomRoot. All rights reserved.</p>
+            <p class="terminal-text">root@phantom:~# logout</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
