@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+attend je t'envoie <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -7,109 +7,171 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">PhantomRoot</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="whoami.html">whoami</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="ctf.html">ctf</a></li>
+                <li><a href="projects.html">projets</a></li>
+                <li><a href="certs.html">certifications</a></li>
+                <li><a href="tools.html">outils</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<nav>
+   <section style="padding-top: 120px;">
     <div class="container">
-        <a href="index.html" class="logo">PhantomRoot</a>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <ul id="nav-menu">
-            <li><a href="whoami.html">whoami</a></li>
-            <li><a href="blog.html">blog</a></li>
-            <li><a href="ctf.html">ctf</a></li>
-            <li><a href="projects.html">projets</a></li>
-            <li><a href="certs.html">certifications</a></li>
-            <li><a href="tools.html">outils</a></li>
-            <li><a href="contact.html">contact</a></li>
-        </ul>
+        <h1 class="section-title">CTF & LAB ACTIVITY</h1>
+        <p class="section-subtitle">Progression pratique en offensive security & infrastructure labs</p>
+
+        <!-- STATS RÉELLES -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin: 3rem 0; padding: 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px;">
+            <div style="text-align: center;">
+                <div style="font-size: 2rem; color: var(--accent-primary); font-weight: 700;">35+</div>
+                <div style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.85rem;">HTB Machines</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 2rem; color: var(--accent-primary); font-weight: 700;">4 Fortress</div>
+                <div style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.85rem;">Enterprise Labs</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 2rem; color: var(--accent-primary); font-weight: 700;">Sherlocks</div>
+                <div style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.85rem;">Forensics Labs</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 2rem; color: var(--accent-primary); font-weight: 700;">40+</div>
+                <div style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.85rem;">Challenges</div>
+            </div>
+        </div>
+
+        <!-- MACHINES -->
+        <div style="margin-bottom: 3rem; padding: 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px;">
+            <h2 style="color: var(--accent-secondary); margin-bottom: 1rem;">HackTheBox Machines Owned</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.7rem;">
+                <span class="tag">Headless</span><span class="tag">Sense</span><span class="tag">Jerry</span>
+                <span class="tag">Soulmate</span><span class="tag">Previous</span><span class="tag">Conversor</span>
+                <span class="tag">Signed</span><span class="tag">CodePartTwo</span><span class="tag">Legacy</span>
+                <span class="tag">Active</span><span class="tag">HackNet</span><span class="tag">MonitorsFour</span>
+                <span class="tag">Gavel</span><span class="tag">Expressway</span><span class="tag">Eighteen</span>
+                <span class="tag">Giveback</span><span class="tag">Imagery</span><span class="tag">DarkZero</span>
+                <span class="tag">NanoCorp</span><span class="tag">Guardian</span><span class="tag">Devel</span>
+                <span class="tag">Planning</span><span class="tag">Baby</span><span class="tag">Mantis</span>
+                <span class="tag">Titanic</span><span class="tag">Alert</span><span class="tag">Lame</span>
+                <span class="tag">Cap</span><span class="tag">Blocky</span><span class="tag">Forest</span>
+                <span class="tag">Cicada</span><span class="tag">Bastion</span><span class="tag">Arctic</span>
+            </div>
+        </div>
+
+        <!-- FORTRESS -->
+        <div style="margin-bottom: 3rem; padding: 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px;">
+            <h2 style="color: var(--accent-secondary); margin-bottom: 1rem;">Fortress Enterprise Labs</h2>
+
+            <h3 style="color: var(--accent-primary);">Akerva</h3>
+
+            <h3 style="color: var(--accent-primary);">Synacktiv</h3>
+            <h3 style="color: var(--accent-primary);">jet</h3>
+            <h3 style="color: var(--accent-primary);">context</h3>
+        </div>
+
+        <!-- SHERLOCKS -->
+        <div style="margin-bottom: 3rem; padding: 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px;">
+            <h2 style="color: var(--accent-secondary); margin-bottom: 1rem;">Sherlock Investigations</h2>
+            <div style="display:flex;flex-wrap:wrap;gap:0.7rem;">
+                <span class="tag">SalineBreeze‑1</span>
+                <span class="tag">SalineBreeze‑2</span>
+                <span class="tag">Malevolent ModMaker</span>
+            </div>
+        </div>
+
+        <!-- CHALLENGES -->
+        <div style="margin-bottom: 3rem; padding: 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px;">
+            <h2 style="color: var(--accent-secondary); margin-bottom: 1rem;">Skill Challenges</h2>
+            <div style="display:flex;flex-wrap:wrap;gap:0.7rem;">
+                <span class="tag">BabyEncryption</span><span class="tag">xorxorxor</span>
+                <span class="tag">CubeMadness</span><span class="tag">Debugging Interface</span>
+                <span class="tag">POPO</span><span class="tag">Phase Madness</span>
+                <span class="tag">oBfsC4t10n2</span><span class="tag">PINsmith</span>
+                <span class="tag">Cred Hunter</span><span class="tag">Broken Decryptor</span>
+                <span class="tag">Simple Encryptor</span><span class="tag">The Needle</span>
+                <span class="tag">Easy Phish</span>
+            </div>
+        </div>
+         <!-- CTF COMPETITIONS -->
+<div style="margin-bottom: 3rem; padding: 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px;">
+    <h2 style="color: var(--accent-secondary); margin-bottom: 1.5rem;">CTF Competitions</h2>
+
+    <!-- Senegal Hack Tour -->
+    <div style="margin-bottom: 2rem;">
+        <h3 style="color: var(--accent-primary);">🇸🇳 Senegal Hack Tour 2025 — FINAL WAR ⚔</h3>
+        <p style="color: var(--text-secondary); margin: 0.5rem 0;">
+            National cybersecurity competition featuring the top 16 qualifiers across Senegal in a high-pressure
+            <strong>1v1 elimination bracket</strong> (Quarterfinals → Semifinals → Grand Final).
+        </p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:0.8rem;">
+            <span class="tag">Qualified Top 16 Nationally</span>
+            <span class="tag">Pre-Qualification Rank: 🥈 2nd Place</span>
+            <span class="tag">Final Stage: Quarterfinalist</span>
+            <span class="tag">Format: 1v1 Attack/Defense</span>
+            <span class="tag">Pressure-Based Security Challenges</span>
+        </div>
+
+        <p style="margin-top:0.8rem; color: var(--text-secondary); font-size:0.9rem;">
+            Organized in partnership with <strong>Groupe ISI – Institut Supérieur d'Informatique</strong>.  
+            Event leads included members of Senegal’s cybersecurity community (mooder1, 610s, loufa, r0gg).
+        </p>
     </div>
-</nav>
 
-<section class="main-section">
-<div class="container">
+    <!-- HackDay 2026 -->
+    <div>
+        <h3 style="color: var(--accent-primary);">⚡ HackDay 2026 (Team Competition)</h3>
+        <p style="color: var(--text-secondary); margin: 0.5rem 0;">
+            Collaborative cybersecurity HackDay event involving multiple teams solving real-world offensive security challenges.
+        </p>
 
-<h1 class="section-title">CTF & LAB ACTIVITY</h1>
-<p class="section-subtitle">Progression pratique en offensive security & infrastructure labs</p>
-
-<!-- STATS -->
-<div class="stats-grid">
-    <div><div class="stat-number">35+</div><div class="stat-label">HTB Machines</div></div>
-    <div><div class="stat-number">4 Fortress</div><div class="stat-label">Enterprise Labs</div></div>
-    <div><div class="stat-number">Sherlocks</div><div class="stat-label">Forensics Labs</div></div>
-    <div><div class="stat-number">40+</div><div class="stat-label">Challenges</div></div>
-</div>
-
-<!-- MACHINES -->
-<div class="card">
-    <h2>HackTheBox Machines Owned</h2>
-    <div class="tag-container">
-        <span class="tag">Headless</span><span class="tag">Sense</span><span class="tag">Jerry</span>
-        <span class="tag">Active</span><span class="tag">Devel</span><span class="tag">Lame</span>
-        <span class="tag">Forest</span><span class="tag">Bastion</span><span class="tag">Arctic</span>
+        <div style="display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:0.8rem;">
+            <span class="tag">Team-Based CTF</span>
+            <span class="tag">Final Ranking: 77th Place</span>
+            <span class="tag">Offensive Security Scenarios</span>
+            <span class="tag">Live Attack Simulations</span>
+        </div>
     </div>
 </div>
 
-<!-- FORTRESS -->
-<div class="card">
-    <h2>Fortress Enterprise Labs</h2>
-    <p class="accent">Akerva — Synacktiv — Jet — Context</p>
-</div>
-
-<!-- SHERLOCKS -->
-<div class="card">
-    <h2>Sherlock Investigations</h2>
-    <div class="tag-container">
-        <span class="tag">SalineBreeze-1</span>
-        <span class="tag">SalineBreeze-2</span>
-        <span class="tag">Malevolent ModMaker</span>
     </div>
-</div>
+   
 
-<!-- CHALLENGES -->
-<div class="card">
-    <h2>Skill Challenges</h2>
-    <div class="tag-container">
-        <span class="tag">BabyEncryption</span>
-        <span class="tag">xorxorxor</span>
-        <span class="tag">CubeMadness</span>
-    </div>
-</div>
-
-<!-- ✅ CTF COMPETITIONS (MAINTENANT VISIBLE) -->
-<div class="card highlight">
-    <h2>CTF Competitions</h2>
-
-    <h3>🇸🇳 Senegal Hack Tour 2025 — FINAL WAR</h3>
-    <p>Top 16 national qualifiers in 1v1 elimination bracket format.</p>
-    <div class="tag-container">
-        <span class="tag">🥈 Pre-Qual Rank: 2nd</span>
-        <span class="tag">Quarterfinalist</span>
-        <span class="tag">Attack/Defense Format</span>
-    </div>
-
-    <h3 style="margin-top:2rem;">⚡ HackDay 2026</h3>
-    <p>Team-based offensive security competition.</p>
-    <div class="tag-container">
-        <span class="tag">Team CTF</span>
-        <span class="tag">Rank: 77th</span>
-    </div>
-</div>
-
-</div>
 </section>
 
-<footer>
-    <div class="container">
-        <p>© 2025 Lah Dore</p>
-    </div>
-</footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 lah Dore. All rights reserved.</p>
+            <p class="terminal-text">lah dore logout</p>
+        </div>
+    </footer>
 
-<script>
-function toggleMenu() {
-    document.getElementById('nav-menu').classList.toggle('active');
-}
-</script>
+    <script src="js/auth.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
 
+        function filterCTF(category) {
+            const posts = document.querySelectorAll('.post-card');
+            posts.forEach(post => {
+                if (category === 'all' || post.dataset.category === category) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
-</html>
+</html>   et attend je t'envoie le css    
