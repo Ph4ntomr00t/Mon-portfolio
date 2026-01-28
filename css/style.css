@@ -4,12 +4,16 @@
     --bg-tertiary: #1a2347;
     --text-primary: #e2e8f0;
     --text-secondary: #94a3b8;
-    --accent-primary: #ff9900;
-    --accent-secondary: #00d9ff;
-    --accent-danger: #ff3366;
-   --border-color: rgba(255, 153, 0, 0.1);
-    --shadow-glow: rgba(255, 153, 0, 0.3);
+
+    --accent-primary: #00D9FF;      
+    --accent-primary-rgb: 0, 217, 255; 
+    --accent-secondary: #FF9900;     
+    --accent-danger: #FF3366;        
+    
+    --border-color: rgba(0, 217, 255, 0.1);
+    --shadow-glow: rgba(0, 217, 255, 0.3);
 }
+
 
 * {
     margin: 0;
